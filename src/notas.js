@@ -5,3 +5,8 @@ export function clasificar(nota) {
   return 'LIBRE';
 }
 
+export function promedio(notas) {
+  if (notas.length === 0) throw new Error('Lista vacía');
+  const suma = notas.reduce((acc, n) => acc + n, 0);
+  return suma / notas.length;
+}
